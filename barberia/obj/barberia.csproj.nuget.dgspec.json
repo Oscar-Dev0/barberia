@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Practicas_Progrmacion\\barberia\\barberia\\barberia.csproj": {}
+    "C:\\Users\\oscardev\\Desktop\\barberia\\barberia\\barberia.csproj": {}
   },
   "projects": {
-    "D:\\Practicas_Progrmacion\\barberia\\barberia\\barberia.csproj": {
+    "C:\\Users\\oscardev\\Desktop\\barberia\\barberia\\barberia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Practicas_Progrmacion\\barberia\\barberia\\barberia.csproj",
+        "projectUniqueName": "C:\\Users\\oscardev\\Desktop\\barberia\\barberia\\barberia.csproj",
         "projectName": "barberia",
-        "projectPath": "D:\\Practicas_Progrmacion\\barberia\\barberia\\barberia.csproj",
-        "packagesPath": "C:\\Users\\EST-5295\\.nuget\\packages\\",
-        "outputPath": "D:\\Practicas_Progrmacion\\barberia\\barberia\\obj\\",
+        "projectPath": "C:\\Users\\oscardev\\Desktop\\barberia\\barberia\\barberia.csproj",
+        "packagesPath": "C:\\Users\\oscardev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oscardev\\Desktop\\barberia\\barberia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\EST-5295\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\oscardev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -1,115 +1,133 @@
-﻿class barberia
+﻿using System;
+
+class Barberia
 {
     static void Main(string[] args)
     {
-        var Usuario = "";
+        var Usuario = ""; // Variable para almacenar el nombre del usuario
+        var opcion = ""; // Variable para almacenar la opción seleccionada
 
-        var uñas = "";
-
-
-        var opcion = "";
-
-
-        Console.WriteLine("Bienvenido al salon 10-10 \nColegio Albertazzi");
+        Console.WriteLine("Bienvenido al salón 10-10 \nColegio Albertazzi");
         Console.ReadKey();
         Console.Clear();
         Console.WriteLine("Puedes proporcionarme tu nombre.");
-        Usuario = Console.ReadLine();
+        Usuario = Console.ReadLine(); // Se solicita al usuario que ingrese su nombre
         Console.Clear();
-        do {
-            Console.WriteLine("{0}, Dime cual servicio nesecitas\nOpciones: \n A- barberia\n B- Estilismo\n C- Manicura \n F- Salir", Usuario);
-            opcion = Console.ReadLine();
-            Console.Clear();
 
+        do
+        {
+            Console.Clear();
+            Console.WriteLine("{0}, Dime cuál servicio necesitas\nOpciones: \n A- barbería\n B- estilismo\n C- manicura \n F- salir", Usuario);
+            opcion = Console.ReadLine(); // Se solicita al usuario que seleccione una opción
+            Console.Clear();
 
             if (opcion.ToLower() == "a")
             {
-                var pelo = "";
-                var barba = "";
+                var pelo = ""; // Variable para almacenar el estado del pelo
+                var barba = ""; // Variable para almacenar el estado de la barba
 
-                Console.WriteLine("{0}, aca te dejo las opciones de la barberia\n A- Corte de pelo: ¢3500 \n B- Corte de pelo y barba: ¢5000\n C- Corte de barba y Limpiza facial: ¢3000", Usuario);
-                opcion = Console.ReadLine();
+                Console.WriteLine("{0}, aquí te dejo las opciones de la barbería\n A- Corte de pelo: ¢3500 \n B- Corte de pelo y barba: ¢5000\n C- Corte de barba y limpieza facial: ¢3000", Usuario);
+                opcion = Console.ReadLine(); // Se solicita al usuario que seleccione una opción
 
                 switch (opcion.ToLower())
                 {
                     case "a":
-                        Barberia(ref pelo, ref barba, "corte");
-                        Console.WriteLine("{0}, ahora tu pelo esta {1}", Usuario, pelo);
+                        barberia(ref pelo, ref barba, "corte"); // Se llama a la función Barberia para realizar un corte de pelo
+                        Console.WriteLine("{0}, ahora tu pelo está {1}", Usuario, pelo);
                         break;
                     case "b":
-                        Barberia(ref pelo, ref barba, "corte/barba");
-                        Console.WriteLine("{0}, ahora esta tu con {1} y {2}", Usuario, barba, pelo);
+                        barberia(ref pelo, ref barba, "corte/barba"); // Se llama a la función Barberia para realizar un corte de pelo y barba
+                        Console.WriteLine("{0}, ahora tienes {1} y {2}", Usuario, barba, pelo);
                         break;
                     case "c":
-                        Barberia(ref pelo, ref barba, "barba/limp");
-                        Console.WriteLine("{0}, Ahora tu barba esta {1}", Usuario, barba);
+                        barberia(ref pelo, ref barba, "barba/limp"); // Se llama a la función Barberia para realizar un corte de barba y limpieza facial
+                        Console.WriteLine("{0}, ahora tu barba está {1}", Usuario, barba);
                         break;
-                };
+                }
             }
             else if (opcion.ToLower() == "b")
             {
-                var pelo = "";
-                var rostro = "";
+                var pelo = ""; // Variable para almacenar el estado del pelo
+                var rostro = ""; // Variable para almacenar el estado del rostro
 
-                Console.WriteLine("{0}, Aca te dejo las opciones de servicio de Estilismo\n A- Teñido de pelo: ¢2500 \n B- Lavado de pelo: ¢1500 \n C- Limpiza facial: ¢1200", Usuario);
-                opcion = Console.ReadLine();
+                Console.WriteLine("{0}, aquí te dejo las opciones de servicio de estilismo\n A- Teñido de pelo: ¢2500 \n B- Lavado de pelo: ¢1500 \n C- Limpieza facial: ¢1200", Usuario);
+                opcion = Console.ReadLine(); // Se solicita al usuario que seleccione una opción
 
                 switch (opcion.ToLower())
                 {
                     case "a":
-                        Estilista("teñido", ref pelo);
-                        Console.WriteLine("{0}, Ahora tienes el pelo teñido de color {1}.", Usuario, pelo);
+                        Estilista("teñido", ref pelo); // Se llama a la función Estilista para realizar un teñido de pelo
+                        Console.WriteLine("{0}, ahora tienes el pelo teñido de color {1}.", Usuario, pelo);
                         break;
                     case "b":
-                        Estilista("lavado", ref pelo);
-                        Console.WriteLine("{0}, Ahora tienes el pelo {1}.", Usuario, pelo);
+                        Estilista("lavado", ref pelo); // Se llama a la función Estilista para realizar un lavado de pelo
+                        Console.WriteLine("{0}, ahora tienes el pelo {1}.", Usuario, pelo);
                         break;
                     case "c":
-                        Estilista("Limpieza", ref rostro);
-                        Console.WriteLine("{0}, Ahora tienes el rostro {1}.", Usuario, rostro);
+                        Estilista("limpieza", ref rostro); // Se llama a la función Estilista para realizar una limpieza facial
+                        Console.WriteLine("{0}, ahora tienes el rostro {1}.", Usuario, rostro);
                         break;
-                };
-
+                }
             }
             else if (opcion.ToLower() == "c")
             {
-                Console.WriteLine("{0}, aca te dejo las opciones de Manicura\n A- Pedicura: ¢6000 \n B- poner uñas: ¢4000 \n C- pintar uñas: ¢1500  ", Usuario);
-                //pedicure
+                var uñas = ""; // Variable para almacenar el estado de las uñas
+
+                Console.WriteLine("{0}, aquí te dejo las opciones de manicura\n A- Pedicura: ¢6000 \n B- Poner uñas: ¢4000 \n C- Pintar uñas: ¢1500", Usuario);
+                opcion = Console.ReadLine(); // Se solicita al usuario que seleccione una opción
+
+                switch (opcion.ToLower())
+                {
+                    case "a":
+                        Manicura("pedicura", ref uñas); // Se llama a la función Manicura para realizar una pedicura
+                        Console.WriteLine("{0}, ahora tienes las uñas {1}.", Usuario, uñas);
+                        break;
+                    case "b":
+                        Manicura("poner uñas", ref uñas); // Se llama a la función Manicura para poner uñas
+                        Console.WriteLine("{0}, ahora tienes las uñas puestas.", Usuario);
+                        break;
+                    case "c":
+                        Manicura("pintar uñas", ref uñas); // Se llama a la función Manicura para pintar las uñas
+                        Console.WriteLine("{0}, ahora tienes las uñas pintadas de color {1}.", Usuario, uñas);
+                        break;
+                }
             }
         } while (opcion.ToLower() != "f");
     }
 
-    public static void Barberia(ref string pelo, ref string barba, string option)
+    // Función para realizar diferentes cortes de pelo y barba
+    public static void barberia(ref string pelo, ref string barba, string option)
     {
-        switch(option)
+        switch (option)
         {
             case "corte":
                 pelo = "corto";
-            break;
+                break;
             case "corte/barba":
-                barba = "Barba corta";
-                pelo = "Pelo corto";
-            break;
+                barba = "barba corta";
+                pelo = "pelo corto";
+                break;
             case "barba/limp":
                 barba = "corta y limpia";
-            break;
+                break;
         }
     }
 
+    // Función para realizar diferentes servicios de estilismo
     public static void Estilista(string option, ref string variable)
     {
         Console.Clear();
-        switch(option)
+        switch (option)
         {
             case "teñido":
-                Console.WriteLine("De que color quieres el pelo?");
+                Console.WriteLine("De qué color quieres el pelo?");
                 variable = Console.ReadLine();
                 break;
             case "lavado":
-                variable = "Lavado";
+                variable = "lavado";
                 break;
-            case "Limpieza":
-                variable = "Limpia la cara";
+            case "limpieza":
+                variable = "limpia la cara";
                 break;
             default:
                 variable = string.Empty;
@@ -117,4 +135,21 @@
         }
     }
 
+    // Función para realizar diferentes servicios de manicura
+    public static void Manicura(string option, ref string variable)
+    {
+        switch (option)
+        {
+            case "pedicura":
+                variable = "limpias";
+                break;
+            case "poner uñas":
+                variable = "uñas postizas";
+                break;
+            case "pintar uñas":
+                Console.WriteLine("De qué color quieres las uñas?");
+                variable = Console.ReadLine();
+                break;
+        }
+    }
 }
